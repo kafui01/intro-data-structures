@@ -1,0 +1,55 @@
+
+ a. members = ["Vivian", "Ava", "Josh", "Patrick", "Mike"];
+
+
+ b.Insert a new person, "Mary" at the end of the line. In other words, you should insert Mary after Mike.
+    members.push('Mary');
+    console.log(members)
+
+ c. Find a person in line named "Josh." This function should return the position of 2 in the array, 
+    (recall that arrays are 0-based).
+
+    for(let i = 0; i < members.length; i++){
+       if(members[i] === 'Josh'){
+         console.log(members[i])
+       }
+     } 
+
+  d. Find a person in line named "Emily." What should your 
+     function return if it does not find the item in the array?
+
+     function foo(name){
+     for(let i = 0; i < members.length; i++){
+       if(members[i] !== 'Emily'){
+         console.log('Emily not on the list')
+        }
+      }
+     } 
+     foo('Emily');
+
+
+   e. What if Ava wants to allow a friend, "Melissa", to cut in line in front of her? 
+      How would you code this so Melissa appears before Ava?
+
+      let ab = members.indexOf('Ava');
+
+      members.splice(ab,0,'Melissa')
+      console.log(members)
+
+   f. If Patrick wants to leave the line, how would you delete him from the array?
+      
+       members.splice(3,1)
+       console.log(members)
+
+2.  Provide another real-world example that you can model using a data structure.
+
+    ANS
+    an example is how new subscribers to a library and how to store their detail
+    to books they borrow.
+
+3.  How would your data structure allow developers to access and manipulate the data?
+    ANS
+    new subscribers could be stacked on old comers and linked to a time frame to determine
+    the dead line for returning borrowed books. which would imply the first to borrow 
+    would be the first to return
+    
