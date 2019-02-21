@@ -37,9 +37,18 @@
       console.log(members)
 
    f. If Patrick wants to leave the line, how would you delete him from the array?
-      
-       members.splice(3,1)
-       console.log(members)
+
+        function foo(name){
+          for(let a = 0; a < members.length; a++){
+             if(members[a] === name){
+                members.splice(a, 1);
+                console.log(members)
+                }
+             }
+        }
+
+        foo('Patrick')
+
 
 2.  Provide another real-world example that you can model using a data structure.
 
